@@ -78,6 +78,19 @@ Make sure you're familiar with the following terminology related to Windows Upda
 |Driver sync|Part of the scan that checks driver updates only. This sync is optional and runs after the software sync.| 
 |ProductSync|A sync based on attributes, in which the client provides a list of device, product, and caller attributes ahead of time to allow service to check applicability in the cloud. |
 
+### Understanding proxy behavior
+As of the January 2021 security update, all Windows 10 and above platforms have the following update detection behavior regarding proxies. 
+
+- For Windows Update URLs which are used for update detection [([MS-WUSP]: SimpleAuth Web Service | Microsoft Docs, [MS-WUSP]: Client Web Service | Microsoft Docs)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wusp/69093c08-da97-445e-a944-af0bef36e4ec):
+   - If a system proxy is configured, first system proxy is attemted. If this fails to reach the service due to the system proxy, service, or authentication error code, then the user proxy is attempted if it has been allowed via policy. 
+
+For intranet Windows Server Update Service (WSUS) update service URLs, this proxy behavior can be configured via:
+> Group Policy: /Windows Update/Manage updates offered from Windows Server Update Service/Specify Intranet Microsfot update service location 
+> or Configuration Service Provider (CSP) Policy: [Update/SetProxyBehaviorForUpdateDetection](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setproxybehaviorforupdatedetection)
+
+- For Windows Update URLs which are NOT used for update detection (e.g. downloading, reporting, etc.):
+   - First, user proxy is attempted. If this fails to reach the service due to the proxy, service, or authentication error code, then the system proxy is attempted. 
+
 ### How Windows Update scanning works 
  
 Windows Update does the following actions when it runs a scan. 

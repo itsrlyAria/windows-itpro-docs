@@ -49,10 +49,10 @@ Windows Update for Business enables an IT administrator to receive and manage a 
 
 Windows Update for Business provides management policies for several types of updates to Windows 10 devices:
 
-- **Feature updates:** Previously referred to as "upgrades," feature updates contain not only security and quality revisions, but also significant feature additions and changes. Feature updates are released as soon as they become available.
-- **Quality updates:** Quality updates are traditional operating system updates, typically released on the second Tuesday of each month (though they can be released at any time). These include security, critical, and driver updates.
-- **Driver updates:** Updates for non-Microsoft drivers that are relevant to your devices. Driver updates are on by default, but you can use Windows Update for Business policies to turn them off if you prefer. 
-- **Microsoft product updates**: Updates for other Microsoft products, such as versions of Office that are installed by using Windows Installer (MSI). Versions of Office that are installed by using Click-to-Run can't be updated by using Windows Update for Business. Product updates are off by default. You can turn them on by using Windows Update for Business policies.
+- **Feature updates:** Previously referred to as "upgrades," feature updates contain not only security and quality revisions, but also significant feature additions and changes. Feature updates are released as soon as they become available. If you are upgrading via Windows Update, feature updates will come patched with the latest quality update. These feature updates will raise the build number (ex. 10.0.**19044** to 10.0.**22000**)
+- **Quality updates:** Quality updates are traditional updates to the operating system. Please note that Windows Update for Business devices only get the security or critically marked quality updates (typically released on the second Tuesday of each month), not the optional quality updates. Other names for Quality Updates include: LCUs, patches, and 'B' releases. These updates will each have their own KB number and associated arcticle and will raise the build revision number (ex. 10.0.22000.**1** to 10.0.22000.**2**)
+- **Driver updates:** Updates for non-Microsoft drivers that are relevant to your devices. Driver updates are on by default, but you can use Windows Update for Business policies to turn them off if you prefer. By default, your device will recieve all applicable drivers that are published to Windows Update. 
+- **Microsoft product updates**: Updates for other Microsoft products, such as versions of Office that are installed by using Windows Installer (MSI) and Visual Studio, are offered to devices who are WU connected who have enabled other Microsoft product updates. Please note that other versions of Office that are installed by using Click-to-Run can't be updated by using Windows Update. Other Microsoft Product updates are off by default. You can turn them on by using the enable other Microsoft Product Updates policy. 
 
 
 ## Offering
@@ -65,9 +65,11 @@ You can defer or pause the installation of updates for a set period of time.
 
 The branch readiness level enables administrators to specify which channel of feature updates they want to receive. Today there are branch readiness level options for both pre-release and released updates:
 
+- Windows Insider Canary
 - Windows Insider Dev
 - Windows Insider Beta
-- Windows Insider Preview
+- Windows Insider Release Preview
+- Windows Insider Release Preview for Quality Updates only
 - General Availability Channel
 
 

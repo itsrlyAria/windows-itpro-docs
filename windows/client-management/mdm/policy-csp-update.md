@@ -16,8 +16,6 @@ ms.topic: reference
 <!-- Update-Begin -->
 # Policy CSP - Update
 
-[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
-
 <!-- Update-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 <!-- Update-Editable-End -->
@@ -105,6 +103,8 @@ Update CSP policies are listed below based on the group policy area:
   - [SetAutoRestartNotificationDisable](#setautorestartnotificationdisable)
 
 ## Windows Insider Preview
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- ConfigureDeadlineNoAutoRebootForFeatureUpdates-Begin -->
 ### ConfigureDeadlineNoAutoRebootForFeatureUpdates

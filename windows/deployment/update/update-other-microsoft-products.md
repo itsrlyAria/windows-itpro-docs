@@ -55,6 +55,7 @@ The following is a list of other Microsoft products that might be updated:
 - Office 2016 (MSI versions of Office) 
 - PlayReady
 - Windows Admin Center
+- Windows Defender
 - Silverlight
 - Skype for Business
 - SQL
